@@ -1,0 +1,103 @@
+    1  sudo apt-get install apache2
+    2  sudo apt-get update
+    3  sudo apt-get install apache2
+    4  sudo sed -i "s/Options Indexes FollowSymLinks/Options FollowSymLinks/" /etc/apache2/apache2.conf
+    5  sudo systemctl stop apache2.service
+    6  sudo systemctl start apache2.service
+    7  sudo systemctl enable apache2.service
+    8  sudo apt-get install mariadb-server mariadb-client
+    9  sudo systemctl stop mariadb.service
+   10  sudo systemctl start mariadb.service
+   11  sudo systemctl enable mariadb.service
+   12  sudo mysql_secure_installation
+   13  sudo systemctl restart mariadb.service
+   14  sudo apt-get install php php-common php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-mcrypt php-ldap php-zip php-curl
+   15  sudo apt-get install php-ldap php-zip php-curl
+   16  sudo mysql -u root -p
+   17  cd /tmp && wget https://releases.wikimedia.org/mediawiki/1.29/mediawiki-1.29.0.tar.gz
+   18  sudo tar -zxvf mediawiki*.tar.gz
+   19  sudo mkdir -p /var/www/html/mediawiki
+   20  sudo mv mediawiki-1.29.0/* /var/www/html/mediawiki
+   21  sudo chown -R www-data:www-data /var/www/html/
+   22  sudo chmod -R 755 /var/www/html/
+   23  sudo vi /etc/apache2/sites-available/mediawiki.conf
+   24  sudo a2ensite mediawiki.conf
+   25  sudo  systemctl reload apache2
+   26  sudo systemctl restart apache2.service
+   27  curl localhost:80
+   28  cd /ver
+   29  cd /var
+   30  ls
+   31  cd www
+   32  ls
+   33  cd html
+   34  ls
+   35  vi index.html
+   36  cd mediawiki
+   37  ls
+   38  cp -pr * /var/www/html/
+   39  sudo cp -pr * /var/www/html/
+   40  ls
+   41  cd ..
+   42  ls
+   43  rm mediawiki/
+   44  sudo rm -rf mediawiki
+   45  ls
+   46  vi index.html
+   47  rm index.html
+   48  sudo rm index.html 
+   49  ls
+   50  cd /etc
+   51  ls
+   52  cd apache2
+   53  ls
+   54  cd sites-
+   55  sudo vi /etc/apache2/sites-available/mediawiki.conf
+   56  sudo systemctl reload apache2
+   57  sudo systemctl restart apache2
+   58  sudo systemctl status apache2
+   59  curl localhost:8081
+   60  vi ports.conf 
+   61  sudo vi ports.conf
+   62  sudo systemctl reload apache2
+   63  sudo systemctl restart apache2
+   64  sudo systemctl status apache2
+   65  curl http://18.216.167.226:8081
+   66  sudo mysql -u wikiuser
+   67  sudo mysql -u wikiuser -p
+   68  sudo mysql -u root -p 
+   69  ls
+   70  cd /var
+   71  ls
+   72  cd www
+   73  ls
+   74  cd html
+   75  ls
+   76  sudo wget http://18.216.167.226:8081/mw-config/index.php?localsettings=1
+   77  ls
+   78  vi 'index.php?localsettings=1'
+   79  rm  'index.php?localsettings=1'
+   80  wget http://18.216.167.226:8081/mw-config/index.php?localsettings=1
+   81  sudo wget http://18.216.167.226:8081/mw-config/index.php?localsettings=1
+   82  ls
+   83  rm 'index.php?localsettings=1'
+   84  sudo  rm 'index.php?localsettings=1'
+   85  ls
+   86  sudo rm 'index.php?localsettings=1.1'
+   87  ls
+   88  curl http://18.216.167.226:8081/mw-config/index.php?localsettings=1
+   89  sudo apt-get install got
+   90  sudo apt-get install git
+   91  cd 
+   92  git clone https://github.com/pjois14/testing1.git
+   93  ls
+   94  cd testing1
+   95  ls
+   96  mv 'LocalSettings (4).php' LocalSettings.php
+   97  sudo mv LocalSettings.php /var/www/html/
+   98  sudo systemctl reload apache2
+   99  sudo systemctl restart apache2
+  100  sudo systemctl status apache
+  101  sudo systemctl status apache2
+  102  history 
+  103  history > commands_list_used.txt
